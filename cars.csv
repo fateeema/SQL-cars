@@ -1,0 +1,10 @@
+model_name,model_base_price,color,option_set_price,manufacture_plant_id,plant_location,plant_name,plant_type,company_owned,manufactured_date
+Orange,15000,White,2300,4,Australia,South Plant,Assembly,1,2017-02-20
+Extra,30000,Nyan,7999,3,Asia,North Plant,Assembly,1,2016-09-19
+Extra,30000,Sky,3000,3,Asia,North Plant,Assembly,1,2016-09-19
+F12 Berlinetta,110000,Blue,11300,3,Asia,North Plant,Assembly,1,2014-11-14
+F12 Berlinetta,110000,Ultraviolet,25000,3,Asia,North Plant,Assembly,1,2014-11-14
+The Brunette,25000,Blue,2000,4,Australia,South Plant,Assembly,1,2013-03-04
+The Brunette,25000,Purple,3900,4,Australia,South Plant,Assembly,1,2013-03-04
+Hat,22000,Blue,2000,4,Australia,South Plant,Assembly,1,2013-06-22
+Hat,22000,Yellow,4000,4,Australia,South Plant,Assembly,1,2013-06-22
