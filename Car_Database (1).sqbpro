@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/fatma/Downloads/Car_Database (1).db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="4743"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="3" parent="0"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,6:mainBrands"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="customers and dealers.sql">SELECT  c.customer_id,c.household_income,d.dealer_id,b.brand_id,
+		b.brand_name,c_v.model_id,m.model_name,m.model_base_price 
+from Customers c
+LEFT join Customer_Ownership co
+on c.customer_id = co.customer_id
+inner join Dealers d
+on co.dealer_id = d.dealer_id
+left join Dealer_Brand d_b 
+on d.dealer_id = d_b.dealer_id
+left join Brands b 
+on b.brand_id = d_b.brand_id
+left join Models m 
+on b.brand_id = m.brand_id
+LEFT JOIN Car_Vins c_v 
+on c_v.vin = co.vin</sql><sql name="cars.sql">select
+	m.model_name,m.model_base_price,co.color,co.option_set_price,
+	mp.manufacture_plant_id,mp.plant_location,
+	mp.plant_name,mp.plant_type,mp.company_owned
+	,cv.manufactured_date 
+from models m
+left join Car_Options co
+on m.model_id = co.model_id
+LEFT JOIN Car_Vins cv
+on cv.model_id = m.model_id
+left join Manufacture_Plant mp
+on mp.manufacture_plant_id = cv.manufactured_plant_id
+LEFT JOIN Car_Parts cp
+on cp.manufacture_plant_id = mp.Manufacture_Plant_id
+
+where cv.manufactured_date is not null</sql><sql name="SQL 3">SELECT  * from Car_Parts
+
+</sql><current_tab id="1"/></tab_sql></sqlb_project>
